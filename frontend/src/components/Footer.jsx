@@ -1,50 +1,48 @@
 /* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import knkLogo from '../assets/file_000000009b94720784d2ef29a08ad1c8.png';
 
 const Footer = () => {
-    const socialLinks = [
-        { icon: FaWhatsapp, href: 'https://wa.me/919629202940', label: 'WhatsApp', color: '#25D366' },
-        { icon: FaInstagram, href: 'https://www.instagram.com/knktripcart/', label: 'Instagram', color: '#E1306C' },
-        { icon: FaFacebookF, href: 'https://www.facebook.com/knktripcart/', label: 'Facebook', color: '#1877F2' },
-        { icon: FaTwitter, href: 'https://twitter.com/knktripcart', label: 'X / Twitter', color: '#fff' },
-        { icon: FaPhoneAlt, href: 'tel:+919629202940', label: 'Call', color: '#fbbf24' },
-        { icon: FaEnvelope, href: 'mailto:saishivatours@gmail.com', label: 'Email', color: '#fbbf24' },
-    ];
-
     return (
-        <footer className="bg-maroon text-amber-100 relative overflow-hidden">
-            {/* Decorative top border */}
-            <div className="h-1"
-                style={{ background: 'linear-gradient(to right, transparent, #fbbf24, #f59e0b, #fbbf24, transparent)' }} />
+        <footer style={{ background: 'linear-gradient(180deg,#3b1206 0%,#1e0903 100%)' }} className="text-amber-100 mt-12">
+            {/* Gold top border */}
+            <div style={{ height: '2px', background: 'linear-gradient(90deg,transparent,#fbbf24,#fde68a,#fbbf24,transparent)' }} />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
                     {/* Brand */}
-                    <div>
+                    <div className="sm:col-span-2 lg:col-span-1">
                         <div className="flex items-center gap-3 mb-5">
-
-                            <h3 className="text-2xl font-serif font-bold text-amber-300">KNK Trip Cart</h3>
+                            <img
+                                src={knkLogo}
+                                alt="KNK Trip Cart"
+                                style={{
+                                    height: '56px',
+                                    width: 'auto',
+                                    filter: 'drop-shadow(0px 0px 8px rgba(251,191,36,0.5))',
+                                    objectFit: 'contain',
+                                }}
+                            />
+                            <span className="text-2xl font-bold tracking-wider text-amber-300 uppercase" style={{ fontFamily: 'Outfit, Poppins, sans-serif' }}>
+                                KNK Trip Cart
+                            </span>
                         </div>
-                        <p className="text-amber-100/70 text-base leading-relaxed mb-6">
-                            Your trusted partner in spiritual and enjoyable travel for more than a decade. Combining comfort, care, and divine experiences.
+                        <p className="text-amber-100/65 text-sm leading-relaxed mb-5">
+                            Your trusted partner in spiritual and enjoyable travel. Combining comfort, care, and divine experiences for devotees across India.
                         </p>
 
-                        {/* Social Links */}
+                        {/* Social */}
                         <div className="flex flex-wrap gap-3">
-                            {socialLinks.map((s) => (
-                                <a
-                                    key={s.label}
-                                    href={s.href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    aria-label={s.label}
-                                    className="w-11 h-11 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1"
-                                    style={{ background: 'rgba(255,255,255,0.1)', color: s.color }}
-                                    onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
-                                    onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
-                                >
+                            {[
+                                { icon: FaWhatsapp, href: 'https://wa.me/919629202940', color: '#25D366', label: 'WhatsApp' },
+                                { icon: FaInstagram, href: 'https://www.instagram.com/knktripcart/', color: '#E1306C', label: 'Instagram' },
+                                { icon: FaFacebookF, href: 'https://www.facebook.com/knktripcart/', color: '#1877F2', label: 'Facebook' },
+                            ].map(s => (
+                                <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}
+                                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                                    style={{ background: 'rgba(255,255,255,0.08)', color: s.color, border: '1px solid rgba(255,255,255,0.12)' }}>
                                     <s.icon />
                                 </a>
                             ))}
@@ -53,12 +51,12 @@ const Footer = () => {
 
                     {/* Packages */}
                     <div>
-                        <h4 className="text-xl font-serif font-bold text-amber-300 mb-5 tracking-wide">Our Packages</h4>
-                        <ul className="space-y-3 text-amber-100/70 text-base">
-                            {['South India Tours', 'North India Tours', 'One Day Trip', 'Hills Trip', 'Char Dham Yatra'].map((p) => (
+                        <h4 className="text-base font-serif font-bold text-amber-300 mb-4 tracking-widest uppercase">Our Packages</h4>
+                        <ul className="space-y-2.5">
+                            {['South India Tours', 'North India Tours', 'One Day Trip', 'Hills Trip', 'Char Dham Yatra'].map(p => (
                                 <li key={p}>
-                                    <Link to="/packages" className="hover:text-amber-300 transition-colors flex items-center gap-2">
-                                        <span className="text-amber-500 text-xs">›</span> {p}
+                                    <Link to="/packages" className="text-amber-100/60 hover:text-amber-300 transition-colors text-sm flex items-center gap-2">
+                                        <span className="text-amber-500">›</span> {p}
                                     </Link>
                                 </li>
                             ))}
@@ -67,38 +65,46 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-xl font-serif font-bold text-amber-300 mb-5 tracking-wide">Quick Links</h4>
-                        <ul className="space-y-3 text-amber-100/70 text-base">
+                        <h4 className="text-base font-serif font-bold text-amber-300 mb-4 tracking-widest uppercase">Quick Links</h4>
+                        <ul className="space-y-2.5">
                             {[
                                 { to: '/', label: 'Home' },
                                 { to: '/packages', label: 'Packages' },
+                                { to: '/gallery', label: 'Gallery' },
                                 { to: '/#about', label: 'About Us' },
                                 { to: '/contact', label: 'Contact' },
-                                { to: '/admin', label: 'Admin' },
-                            ].map((lnk) => (
+                            ].map(lnk => (
                                 <li key={lnk.label}>
-                                    <Link to={lnk.to} className="hover:text-amber-300 transition-colors flex items-center gap-2">
-                                        <span className="text-amber-500 text-xs">›</span> {lnk.label}
-                                    </Link>
+                                    {lnk.to.includes('#') ? (
+                                        <a href={lnk.to} className="text-amber-100/60 hover:text-amber-300 transition-colors text-sm flex items-center gap-2">
+                                            <span className="text-amber-500">›</span> {lnk.label}
+                                        </a>
+                                    ) : (
+                                        <Link to={lnk.to} className="text-amber-100/60 hover:text-amber-300 transition-colors text-sm flex items-center gap-2">
+                                            <span className="text-amber-500">›</span> {lnk.label}
+                                        </Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Contact Info */}
+                    {/* Contact */}
                     <div>
-                        <h4 className="text-xl font-serif font-bold text-amber-300 mb-5 tracking-wide">Contact Info</h4>
-                        <div className="space-y-4 text-amber-100/70 text-base">
-                            <a href="tel:+919629202940" className="flex items-start gap-3 hover:text-amber-300 transition-colors">
-                                <FaPhoneAlt className="text-amber-400 mt-1 shrink-0 text-lg" />
+                        <h4 className="text-base font-serif font-bold text-amber-300 mb-4 tracking-widest uppercase">Contact</h4>
+                        <div className="space-y-3">
+                            <a href="tel:+919629202940"
+                                className="flex items-start gap-3 text-amber-100/65 hover:text-amber-300 transition-colors text-sm">
+                                <FaPhoneAlt className="text-amber-400 mt-0.5 shrink-0" />
                                 +91 96292 02940
                             </a>
-                            <a href="mailto:saishivatours@gmail.com" className="flex items-start gap-3 hover:text-amber-300 transition-colors">
-                                <FaEnvelope className="text-amber-400 mt-1 shrink-0 text-lg" />
+                            <a href="mailto:saishivatours@gmail.com"
+                                className="flex items-start gap-3 text-amber-100/65 hover:text-amber-300 transition-colors text-sm break-all">
+                                <FaEnvelope className="text-amber-400 mt-0.5 shrink-0" />
                                 saishivatours@gmail.com
                             </a>
-                            <p className="flex items-start gap-3">
-                                <FaMapMarkerAlt className="text-amber-400 mt-1 shrink-0 text-lg" />
+                            <p className="flex items-start gap-3 text-amber-100/65 text-sm">
+                                <FaMapMarkerAlt className="text-amber-400 mt-0.5 shrink-0" />
                                 Shop no 2, Saraswathi Complex, C.T.H.Road, Devi Nagar, Thiruninravur – 602024.
                             </p>
                         </div>
@@ -106,11 +112,11 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom bar */}
-            <div className="border-t border-amber-100/10">
-                <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center text-amber-100/50 text-sm gap-3">
-                    <p>© {new Date().getFullYear()} KNK Trip Cart. All rights reserved. </p>
-                    <p className="text-amber-100/30 text-xs">Designed with love for devotees</p>
+            {/* Bottom */}
+            <div style={{ borderTop: '1px solid rgba(251,191,36,0.12)' }}>
+                <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-amber-100/40 text-xs text-center">
+                    <p>© {new Date().getFullYear()} KNK Trip Cart. All rights reserved.</p>
+                    <p>Designed with love for devotees</p>
                 </div>
             </div>
         </footer>

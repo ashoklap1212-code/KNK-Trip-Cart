@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </motion.p>
 
                 {/* TextPressure headline */}
-                <div className="relative z-30 mb-6" style={{ height: '150px' }}>
+                <div className="relative z-30 mb-6" style={{ height: window.innerWidth < 768 ? '100px' : '150px' }}>
                     <TextPressure
                         text="Your path to divine destinations"
                         flex
@@ -48,7 +48,7 @@ const HeroSection = () => {
                         italic={false}
                         textColor="#fef3c7"
                         strokeColor="#fbbf24"
-                        minFontSize={52}
+                        minFontSize={window.innerWidth < 768 ? 32 : 52}
                         fontFamily="Playfair Display"
                     />
                 </div>
