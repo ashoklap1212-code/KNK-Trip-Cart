@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FaStar, FaQuoteLeft } from 'react-icons/fa';
@@ -61,12 +62,12 @@ const TestimonialCarousel = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <p className="section-label mb-3"><span className="apple-emoji">⭐</span> Testimonials</p>
+                    <p className="section-label mb-3"> Testimonials</p>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon mb-5">
                         Blessed Traveler Voices
                     </h2>
                     <div className="golden-divider">
-                        <span className="text-amber-500 text-xl apple-emoji">🙏</span>
+                        
                     </div>
                 </motion.div>
 

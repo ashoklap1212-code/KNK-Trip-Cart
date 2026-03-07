@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaMapMarkerAlt, FaClock, FaRupeeSign, FaWhatsapp, FaPhone, FaInstagram, FaFacebookF, FaTwitter, FaEnvelope, FaTimes } from 'react-icons/fa';
@@ -87,7 +88,7 @@ const PackageCard = ({ pkg }) => {
                             maxWidth: '280px',
                         }}
                     >
-                        <span className="apple-emoji">📞</span> Contact Us
+                         Contact Us
                     </motion.button>
                 </div>
             </div>

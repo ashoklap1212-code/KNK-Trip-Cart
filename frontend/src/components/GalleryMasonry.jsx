@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Masonry from 'react-masonry-css';
 import { motion } from 'framer-motion';
 
@@ -32,12 +33,12 @@ const GalleryMasonry = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <p className="section-label mb-3"><span className="apple-emoji">📸</span> Photo Gallery</p>
+                    <p className="section-label mb-3"> Photo Gallery</p>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon mb-5">
                         Divine Destinations Gallery
                     </h2>
                     <div className="golden-divider">
-                        <span className="text-amber-500 text-xl apple-emoji">🌼</span>
+                        
                     </div>
                 </motion.div>
 

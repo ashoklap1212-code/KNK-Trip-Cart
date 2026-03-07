@@ -1,29 +1,30 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 
 const features = [
     {
-        emoji: '🚌',
+        emoji: '',
         title: 'Comfortable Travel',
         description: 'AC buses, private vehicles, and train arrangements for a relaxed journey to every destination.',
         color: '#d97706',
         bg: 'rgba(251,191,36,0.12)',
     },
     {
-        emoji: '🧭',
+        emoji: '',
         title: 'Experienced Guides',
         description: 'Knowledgeable guides who know the temple rituals, timings, and best practices at each pilgrimage site.',
         color: '#7c2d12',
         bg: 'rgba(124,45,18,0.07)',
     },
     {
-        emoji: '👴',
+        emoji: '',
         title: 'Senior Citizen Friendly',
         description: 'Special attention, minimal walking arrangements, wheelchair assistance, and medical support for elderly devotees.',
         color: '#db2777',
         bg: 'rgba(219,39,119,0.07)',
     },
     {
-        emoji: '🙏',
+        emoji: '',
         title: 'Spiritual Experience',
         description: 'Meaningful darshans, puja arrangements, Ganga aarti experiences, and guided temple visits for inner peace.',
         color: '#059669',
@@ -38,10 +39,10 @@ const WhyChooseUs = () => {
 
             {/* Decorative watermarks */}
             <div className="absolute top-0 right-0 text-white/5 text-[300px] pointer-events-none leading-none select-none">
-                <span className="apple-emoji">🙏</span>
+                
             </div>
             <div className="absolute bottom-0 left-0 text-white/5 text-[200px] pointer-events-none leading-none select-none">
-                <span className="apple-emoji">🙏</span>
+                
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -54,13 +55,13 @@ const WhyChooseUs = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <p className="text-amber-400 tracking-[0.3em] uppercase text-sm font-bold mb-3 font-display"><span className="apple-emoji">✨</span> Why Choose Us</p>
+                    <p className="text-amber-400 tracking-[0.3em] uppercase text-sm font-bold mb-3 font-display"> Why Choose Us</p>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-5">
                         Your Trusted Spiritual Partner
                     </h2>
                     <div className="flex items-center justify-center gap-4 max-w-xs mx-auto mb-6">
                         <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent to-amber-400" />
-                        <span className="text-amber-400 text-xl apple-emoji">🌸</span>
+                        
                         <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-amber-400" />
                     </div>
                     <p className="text-amber-100/80 text-lg max-w-2xl mx-auto">
@@ -96,7 +97,7 @@ const WhyChooseUs = () => {
                             }}
                         >
                             {/* Icon */}
-                            <div className="text-6xl mb-5 apple-emoji">{feat.emoji}</div>
+                            
 
                             <h3 className="text-xl font-serif font-bold text-amber-300 mb-4">
                                 {feat.title}

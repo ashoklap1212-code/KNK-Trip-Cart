@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import Navbar from './components/Navbar';
@@ -7,6 +8,7 @@ import Packages from './pages/Packages';
 import PackageDetails from './pages/PackageDetails';
 import Contact from './pages/Contact';
 import AdminDashboard from './pages/AdminDashboard';
+import Gallery from './pages/Gallery';
 
 const WHATSAPP_URL = 'https://wa.me/919629202940?text=Namaste!%20I%20am%20interested%20in%20a%20devotional%20trip.%20Please%20share%20details.';
 
@@ -21,6 +23,7 @@ function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/packages/:id" element={<PackageDetails />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/admin" element={<AdminDashboard />} />
           </Routes>
         </main>

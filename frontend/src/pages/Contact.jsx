@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
@@ -76,7 +77,7 @@ const Contact = () => {
             <div className="relative py-24 overflow-hidden"
                 style={{ background: 'linear-gradient(135deg,#7c2d12,#9a3412 40%,#7c2d12)' }}>
                 <div className="absolute inset-0 pointer-events-none select-none flex items-center justify-end pr-12 opacity-10 text-white text-[200px]">
-                    <span className="apple-emoji">🙏</span>
+                    
                 </div>
                 {/* Top gold rule */}
                 <div className="absolute top-0 inset-x-0 h-1"
@@ -178,7 +179,7 @@ const Contact = () => {
                         <div className="bg-white rounded-2xl p-5 mt-4"
                             style={{ border: '1.5px solid rgba(251,191,36,0.25)', boxShadow: '0 4px 20px rgba(120,53,15,0.08)' }}>
                             <h3 className="font-serif font-bold text-lg mb-3" style={{ color: '#7c2d12' }}>
-                                <span className="apple-emoji">🕐</span> Office Hours
+                                 Office Hours
                             </h3>
                             <div className="space-y-1.5 text-sm" style={{ color: 'rgba(120,53,15,0.7)' }}>
                                 <div className="flex justify-between">
@@ -219,7 +220,7 @@ const Contact = () => {
                     className="rounded-3xl p-10 text-center"
                     style={{ background: 'linear-gradient(135deg,#7c2d12,#9a3412)', boxShadow: '0 8px 48px rgba(120,53,15,0.2)' }}
                 >
-                    <div className="text-5xl mb-4 apple-emoji">🙏</div>
+                    
                     <h2 className="text-3xl font-serif font-bold text-white mb-4">
                         Ready to Plan Your Pilgrimage?
                     </h2>

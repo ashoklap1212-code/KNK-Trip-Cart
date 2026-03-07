@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
@@ -35,7 +36,7 @@ const AboutSection = () => {
         <section className="py-24 bg-cream transition-colors duration-300 relative overflow-hidden">
             {/* Decorative background */}
             <div className="absolute top-10 left-10 text-gold/10 text-[200px] pointer-events-none">
-                <span className="apple-emoji">🙏</span>
+                
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -79,7 +80,7 @@ const AboutSection = () => {
                                 transition={{ delay: 0.2 }}
                                 className="bg-white/50 p-6 rounded-xl border border-gold/20"
                             >
-                                <h4 className="text-xl font-serif font-bold text-saffron mb-2"><span className="apple-emoji">🙏</span> Our Vision</h4>
+                                <h4 className="text-xl font-serif font-bold text-saffron mb-2"> Our Vision</h4>
                                 <p className="text-sm text-maroon/70 leading-relaxed">To become a leading travel service provider recognised for providing amazing, safe, and rewarding travel experiences. We strive to combine spiritual and leisure experiences with outstanding care and comfort.</p>
                             </motion.div>
                             <motion.div
@@ -89,7 +90,7 @@ const AboutSection = () => {
                                 transition={{ delay: 0.4 }}
                                 className="bg-white/50 p-6 rounded-xl border border-gold/20"
                             >
-                                <h4 className="text-xl font-serif font-bold text-saffron mb-2"><span className="apple-emoji">🙏</span> Our Mission</h4>
+                                <h4 className="text-xl font-serif font-bold text-saffron mb-2"> Our Mission</h4>
                                 <p className="text-sm text-maroon/70 leading-relaxed">To deliver personalised, reasonable, and high-quality travel services that meet a variety of demands. We prioritise client safety, comfort, and happiness, with a specific focus on older individuals.</p>
                             </motion.div>
                         </div>

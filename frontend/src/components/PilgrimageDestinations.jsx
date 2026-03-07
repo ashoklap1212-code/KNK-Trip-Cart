@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -46,12 +47,12 @@ const PilgrimageDestinations = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <p className="section-label mb-3"><span className="apple-emoji">🛕</span> Sacred Destinations</p>
+                    <p className="section-label mb-3"> Sacred Destinations</p>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon mb-5">
                         Popular Pilgrimage Destinations
                     </h2>
                     <div className="golden-divider">
-                        <span className="text-amber-500 text-xl apple-emoji">🙏</span>
+
                     </div>
                     <p className="text-lg text-maroon/70 mt-6 max-w-2xl mx-auto">
                         Visit the holiest temples across India with our comfortable, specially curated spiritual tour packages.

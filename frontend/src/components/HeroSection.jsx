@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
+import TextPressure from './TextPressure';
+import heroBg from '../assets/architecture-color-holy-beautiful-detail.jpg';
 
 const HeroSection = () => {
     const whatsappUrl = "https://wa.me/919629202940?text=Namaste!%20I%20am%20interested%20in%20booking%20a%20devotional%20trip.%20Please%20share%20details.";
@@ -8,147 +11,120 @@ const HeroSection = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 z-10"
-                    style={{
-                        background: 'linear-gradient(to bottom, rgba(120,53,15,0.6) 0%, rgba(180,83,9,0.35) 40%, rgba(120,53,15,0.75) 100%)'
-                    }}
-                />
-                {/* Golden shimmer overlay */}
-                <div className="absolute inset-0 z-10 opacity-35"
-                    style={{
-                        background: 'linear-gradient(135deg, rgba(251,191,36,0.35) 0%, transparent 50%, rgba(217,119,6,0.25) 100%)'
-                    }}
-                />
                 <img
-                    src="https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src={heroBg}
                     alt="Sacred Indian Temple"
                     className="w-full h-full object-cover object-center"
                 />
+                {/* Dark warm overlay so text is readable */}
+                <div className="absolute inset-0"
+                    style={{ background: 'linear-gradient(to bottom, rgba(50,20,5,0.72) 0%, rgba(80,32,8,0.55) 50%, rgba(30,12,3,0.82) 100%)' }}
+                />
             </div>
 
-            {/* Floating decorative emojis */}
-            <motion.div
-                className="absolute top-24 right-8 md:right-20 text-7xl md:text-8xl animate-float z-10 pointer-events-none opacity-20"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.2 }}
-                transition={{ delay: 1.5, duration: 2 }}
-            >
-                <span className="apple-emoji">🙏</span>
-            </motion.div>
-            <motion.div
-                className="absolute bottom-32 left-8 md:left-20 text-5xl md:text-7xl animate-float z-10 pointer-events-none opacity-15"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.15 }}
-                transition={{ delay: 2, duration: 2 }}
-                style={{ animationDelay: '1.5s' }}
-            >
-                <span className="apple-emoji">🙏</span>
-            </motion.div>
-
             {/* Content */}
-            <div className="relative z-20 text-center px-4 max-w-5xl mx-auto py-20">
+            <div className="relative z-20 text-center px-4 max-w-5xl mx-auto" style={{ paddingTop: '120px', paddingBottom: '80px' }}>
 
-                {/* Decorative line */}
-                <motion.div
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ duration: 1.2, delay: 0.1 }}
-                    className="w-28 h-0.5 mx-auto mb-8"
-                    style={{ background: 'linear-gradient(to right, transparent, #fbbf24, transparent)' }}
-                />
-
+                {/* Om Sai Ram badge */}
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="text-amber-300 tracking-[0.3em] uppercase text-base md:text-lg font-semibold mb-6"
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="tracking-[0.4em] uppercase text-sm md:text-base font-bold mb-6"
+                    style={{ color: '#fbbf24', textShadow: '0 0 20px rgba(251,191,36,0.6)' }}
                 >
-                    <span className="apple-emoji">🙏</span> Om Sai Ram <span className="apple-emoji">🙏</span>
+                    ✦ Om Sai Ram ✦
                 </motion.p>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-2xl"
-                >
-                    Begin Your <br />
-                    <span style={{
-                        background: 'linear-gradient(135deg, #fbbf24, #f59e0b, #fde68a, #fbbf24)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text'
-                    }}>
-                        Sacred Journey
-                    </span>
-                </motion.h1>
+                {/* TextPressure headline */}
+                <div className="relative z-30 mb-6" style={{ height: '150px' }}>
+                    <TextPressure
+                        text="Your path to divine destinations"
+                        flex
+                        alpha={false}
+                        stroke={false}
+                        width
+                        weight
+                        italic={false}
+                        textColor="#fef3c7"
+                        strokeColor="#fbbf24"
+                        minFontSize={52}
+                        fontFamily="Playfair Display"
+                    />
+                </div>
 
+                {/* Gold divider */}
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 1, delay: 0.6 }}
+                    className="w-32 mx-auto mb-8"
+                    style={{ height: '2px', background: 'linear-gradient(to right, transparent, #fbbf24, transparent)' }}
+                />
+
+                {/* Subtitle */}
                 <motion.p
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.7 }}
-                    className="text-xl md:text-2xl text-amber-50/95 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
+                    transition={{ duration: 0.8, delay: 0.7 }}
+                    className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+                    style={{ color: 'rgba(254,243,199,0.85)', textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}
                 >
                     Comfortable and well-organized devotional travel packages for devotees.
                     Special care and attention for senior citizens.
                 </motion.p>
 
+                {/* CTA Buttons */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.9 }}
-                    className="flex flex-col sm:flex-row gap-5 justify-center"
+                    transition={{ duration: 0.8, delay: 0.9 }}
+                    className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
                     <a
                         href="/packages"
-                        className="px-10 py-5 font-bold rounded-full text-white text-lg tracking-wide uppercase transition-all duration-300 hover:-translate-y-1 inline-flex items-center justify-center gap-2"
+                        className="px-10 py-4 font-bold rounded-full text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-1"
                         style={{
-                            background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                            boxShadow: '0 6px 28px rgba(245,158,11,0.5)',
+                            background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
+                            color: '#7c2d12',
+                            boxShadow: '0 6px 28px rgba(251,191,36,0.5)',
                         }}
                     >
-                        <span className="apple-emoji">🙏</span> View Packages
+                        View Packages
                     </a>
                     <a
                         href={whatsappUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="px-10 py-5 border-2 border-amber-400 font-bold rounded-full text-amber-300 hover:text-white text-lg tracking-wide uppercase transition-all duration-300 hover:-translate-y-1 flex items-center gap-3 justify-center"
-                        style={{ backdropFilter: 'blur(8px)' }}
-                        onMouseEnter={e => e.currentTarget.style.background = 'rgba(34,197,94,0.85)'}
-                        onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                        className="px-10 py-4 border-2 font-bold rounded-full text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-1 flex items-center gap-3 justify-center"
+                        style={{ borderColor: '#fbbf24', color: '#fef3c7', backdropFilter: 'blur(8px)' }}
+                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(34,197,94,0.8)'; e.currentTarget.style.borderColor = '#16a34a'; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = '#fbbf24'; }}
                     >
-                        <FaWhatsapp className="text-2xl" />
-                        Chat on WhatsApp
+                        <FaWhatsapp className="text-xl" /> Chat on WhatsApp
                     </a>
                 </motion.div>
 
-                {/* Bottom decorative line */}
-                <motion.div
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ duration: 1.2, delay: 1.2 }}
-                    className="w-28 h-0.5 mx-auto mt-14"
-                    style={{ background: 'linear-gradient(to right, transparent, #fbbf24, transparent)' }}
-                />
-
-                {/* Trust indicators */}
+                {/* Trust line */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    className="flex flex-col sm:flex-row justify-center gap-6 mt-10 text-amber-200/80 text-base"
+                    transition={{ delay: 1.2 }}
+                    className="flex flex-wrap justify-center gap-6 mt-10 text-sm font-semibold"
+                    style={{ color: 'rgba(251,191,36,0.75)' }}
                 >
-                    <span><span className="apple-emoji">✅</span> 10+ Years Experience</span>
-                    <span className="hidden sm:block">•</span>
-                    <span><span className="apple-emoji">✅</span> 1000+ Happy Pilgrims</span>
-                    <span className="hidden sm:block">•</span>
-                    <span><span className="apple-emoji">✅</span> Senior Citizen Friendly</span>
+                    <span>5+ Years Experience</span>
+                    <span>•</span>
+                    <span>500+ Happy Pilgrims</span>
+                    <span>•</span>
+                    <span>Senior Citizen Friendly</span>
                 </motion.div>
             </div>
 
-            {/* Bottom gradient fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-amber-50 to-transparent z-20" />
+            {/* Bottom fade into page */}
+            <div className="absolute bottom-0 left-0 right-0 h-28 z-20"
+                style={{ background: 'linear-gradient(to top, #fef9ee, transparent)' }}
+            />
         </section>
     );
 };

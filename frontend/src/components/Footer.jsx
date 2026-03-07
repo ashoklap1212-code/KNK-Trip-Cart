@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
@@ -23,7 +24,7 @@ const Footer = () => {
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3 mb-5">
-                            <span className="text-4xl apple-emoji">🙏</span>
+
                             <h3 className="text-2xl font-serif font-bold text-amber-300">KNK Trip Cart</h3>
                         </div>
                         <p className="text-amber-100/70 text-base leading-relaxed mb-6">
@@ -108,7 +109,7 @@ const Footer = () => {
             {/* Bottom bar */}
             <div className="border-t border-amber-100/10">
                 <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center text-amber-100/50 text-sm gap-3">
-                    <p>© {new Date().getFullYear()} KNK Trip Cart. All rights reserved. <span className="apple-emoji">🙏</span></p>
+                    <p>© {new Date().getFullYear()} KNK Trip Cart. All rights reserved. </p>
                     <p className="text-amber-100/30 text-xs">Designed with love for devotees</p>
                 </div>
             </div>

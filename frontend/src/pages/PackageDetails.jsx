@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BACKEND = 'http://localhost:5000';
+const BACKEND = 'http://localhost:8080';
 
 const fallbackPackage = {
     _id: "1",
@@ -43,7 +44,7 @@ const PackageDetails = () => {
         return (
             <div className="min-h-screen flex items-center justify-center" style={{ background: '#fffdf5' }}>
                 <div className="text-center">
-                    <div className="text-5xl mb-4 apple-emoji">🙏</div>
+
                     <p className="text-xl font-serif" style={{ color: '#7c2d12' }}>Loading package details...</p>
                 </div>
             </div>
@@ -84,7 +85,7 @@ const PackageDetails = () => {
                         <section className="bg-white p-8 rounded-2xl"
                             style={{ border: '1.5px solid rgba(251,191,36,0.25)', boxShadow: '0 4px 24px rgba(124,45,18,0.08)' }}>
                             <h2 className="text-2xl font-serif font-bold mb-4" style={{ color: '#7c2d12' }}>
-                                <span className="apple-emoji">📋</span> Overview
+                                Overview
                             </h2>
                             <p className="leading-relaxed text-lg pb-4" style={{ color: 'rgba(120,53,15,0.75)' }}>
                                 {pkg.description}
@@ -96,7 +97,7 @@ const PackageDetails = () => {
                             <section className="bg-white p-8 rounded-2xl"
                                 style={{ border: '1.5px solid rgba(251,191,36,0.25)', boxShadow: '0 4px 24px rgba(124,45,18,0.08)' }}>
                                 <h2 className="text-2xl font-serif font-bold mb-8" style={{ color: '#7c2d12' }}>
-                                    <span className="apple-emoji">🗺️</span> Itinerary
+                                    Itinerary
                                 </h2>
                                 <div className="space-y-6">
                                     {pkg.itinerary.map((item, index) => (
@@ -129,7 +130,7 @@ const PackageDetails = () => {
                         <div className="sticky top-24 bg-white p-8 rounded-2xl"
                             style={{ boxShadow: '0 8px 48px rgba(124,45,18,0.12)', border: '2px solid rgba(251,191,36,0.3)' }}>
                             <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: '#7c2d12' }}>
-                                <span className="apple-emoji">🙏</span> Interested?
+                                Interested?
                             </h3>
                             <p className="text-sm mb-6" style={{ color: 'rgba(120,53,15,0.6)' }}>
                                 Contact us to book this tour or customize it for your needs.
@@ -168,7 +169,7 @@ const PackageDetails = () => {
                                     className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl font-bold text-lg"
                                     style={{ background: 'linear-gradient(135deg, #fbbf24, #f59e0b)', color: '#7c2d12', boxShadow: '0 4px 20px rgba(251,191,36,0.4)' }}
                                 >
-                                    <span className="apple-emoji">📞</span> Call Us Now
+                                    Call Us Now
                                 </motion.a>
 
                                 {/* Back to packages */}

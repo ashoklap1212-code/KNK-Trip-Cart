@@ -59,8 +59,9 @@ app.delete('/api/upload/:filename', (req, res) => {
     }
 });
 
-// ─── Package Routes (MongoDB CRUD) ──────────────────────────────────────────
+// ─── Package & Gallery Routes (MongoDB CRUD) ──────────────────────────────────────────
 app.use('/api/packages', require('./routes/packageRoutes'));
+app.use('/api/gallery', require('./routes/galleryRoutes'));
 
 // ─── Database Connection ─────────────────────────────────────────────────────
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/knktripcart')

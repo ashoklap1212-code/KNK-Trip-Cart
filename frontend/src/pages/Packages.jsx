@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import PackageCard from '../components/PackageCard';
 
-const BACKEND = 'http://localhost:5000';
+const BACKEND = 'http://localhost:8080';
 
 const dummyPackages = [
     {
@@ -158,7 +159,7 @@ const Packages = () => {
                 {/* Loading */}
                 {loading ? (
                     <div className="text-center py-16">
-                        <div className="text-5xl mb-4 apple-emoji">🙏</div>
+
                         <p className="text-xl font-serif text-maroon/50">Loading packages...</p>
                     </div>
                 ) : (
